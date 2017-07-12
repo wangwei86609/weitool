@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="MysqlContext" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+            connectionURL="jdbc:mysql://mysqlip/ppc_dev" userId="ppdcuser_credit"
+            password="Ppda1@.41ConnPDa@d$963%">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="test.model" targetProject="D:\weidir\weitool\src\main\java">
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="test.xml"  targetProject="D:\weidir\weitool\src\main\resources"/>
+
+        <javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="test.dao"  targetProject="D:\weidir\weitool\src\main\java"/>
+
+        <table tableName="PPC_GYPSOPHILA_RULE" />
+        <table tableName="PPC_GYPSOPHILA_LOG" />
+        <table tableName="PPC_GYPSOPHILA_TACTIC" domainObjectName="GypsophilaTactic"/>
+        
+    </context>
+</generatorConfiguration>
