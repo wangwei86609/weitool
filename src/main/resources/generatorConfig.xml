@@ -13,7 +13,7 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-            connectionURL="jdbc:mysql://mysqlip/ppc_dev" userId="ppdcuser_credit"
+            connectionURL="jdbc:mysql://mysql.test.ppcredit.com:3306/ppc_dev" userId="ppdcuser_credit"
             password="Ppda1@.41ConnPDa@d$963%">
         </jdbcConnection>
 
@@ -25,9 +25,11 @@
 
         <javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="test.dao"  targetProject="D:\weidir\weitool\src\main\java"/>
 
-        <table tableName="PPC_GYPSOPHILA_RULE" />
-        <table tableName="PPC_GYPSOPHILA_LOG" />
-        <table tableName="PPC_GYPSOPHILA_TACTIC" domainObjectName="GypsophilaTactic"/>
+<!--         <table tableName="PPC_GYPSOPHILA_RULE"  domainObjectName="GypsophilaRule"/>
+        <table tableName="PPC_GYPSOPHILA_LOG"  domainObjectName="GypsophilaLog"/>
+        <table tableName="PPC_GYPSOPHILA_TACTIC" domainObjectName="GypsophilaTactic"/> -->
+        <table tableName="PPC_GYPSOPHILA_VARS_STATISTICS" domainObjectName="GypsophilaVarsStatistics"/>
+        <!-- <table tableName="PPC_GYPSOPHILA_VARIABLE" domainObjectName="GypsophilaVariable"/> -->
         
     </context>
 </generatorConfiguration>
